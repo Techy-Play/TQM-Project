@@ -143,7 +143,7 @@ The overall architecture will be:
                    │
                    ▼
 ┌──────────────────────────────────────┐
-│          Python Application Layer     │
+│          Python Application Layer    │
 │ Authentication │ CRUD │ Search       │
 │ Filtering │ Sorting │ Validation     │
 └──────────────────┬───────────────────┘
@@ -299,7 +299,21 @@ The system shall validate required fields before creating the account.
 
 ---
 
-## FR-03 — Password Authentication
+## FR-03 — User Profile Creation
+During first-run setup, the system shall require the user to provide their name. The name shall be stored locally and used to personalize the application interface.
+
+## FR-04 — Organization/Inventory Name
+During first-run setup, the system shall ask the user to provide the name of the store, warehouse, business, or other entity for which the Inventory Management System is being used.
+The application shall display this name in relevant areas of the dashboard.
+
+## FR-05 — Profile Modification
+The user shall be able to modify their name and Store/Warehouse/Business name from the application's Settings section.
+
+
+## FR-06 — Personalized Dashboard
+After successful authentication, the dashboard shall display the user's name and the configured Store/Warehouse/Business name where appropriate.
+
+## FR-07 — Password Authentication
 
 The system shall require authentication before granting access to protected application functionality.
 
@@ -309,7 +323,7 @@ Incorrect authentication attempts shall result in an appropriate error message.
 
 ---
 
-## FR-04 — Keep Me Logged In
+## FR-08 — Keep Me Logged In
 
 The login screen shall provide a **Keep Me Logged In** option.
 
@@ -319,7 +333,7 @@ When disabled, the application shall require authentication during subsequent la
 
 ---
 
-## FR-05 — Authentication Preference Management
+## FR-09 — Authentication Preference Management
 
 The Settings section shall allow the user to change the Keep Me Logged In preference.
 
@@ -329,7 +343,7 @@ The user shall not be required to reinstall or recreate the application account 
 
 # 7. Inventory Management Requirements
 
-## FR-06 — Add Inventory Item
+## FR-10 — Add Inventory Item
 
 The system shall allow the user to create a new inventory record.
 
@@ -348,7 +362,7 @@ The final database fields may be refined during database design.
 
 ---
 
-## FR-07 — View Inventory
+## FR-11 — View Inventory
 
 The system shall display stored inventory records in a structured table.
 
@@ -356,7 +370,7 @@ The user shall be able to view relevant inventory information without manually a
 
 ---
 
-## FR-08 — Update Inventory
+## FR-12 — Update Inventory
 
 The system shall allow authorized users to modify existing inventory records.
 
@@ -364,7 +378,7 @@ Changes shall be saved persistently to the SQLite database.
 
 ---
 
-## FR-09 — Delete Inventory
+## FR-13 — Delete Inventory
 
 The system shall allow the user to delete an inventory record.
 
@@ -372,7 +386,7 @@ The system should request confirmation before permanently deleting a record.
 
 ---
 
-## FR-10 — Data Persistence
+## FR-14 — Data Persistence
 
 Inventory data shall remain available after:
 
@@ -384,13 +398,13 @@ The application shall not recreate or reset the database during normal startup.
 
 ---
 
-# 8. Q13 — Faster Search & Retrieval Requirements
+# 8. Q15 — Faster Search & Retrieval Requirements
 
 This section represents the **core quality objective of the project**.
 
 The official Q13 goal is **Faster Search & Retrieval**, with the suggested features of Search Filters, Sorting Options, Dashboard Quick-Search, and Database Query Optimization. 
 
-## FR-11 — Dashboard Quick-Search
+## FR-16 — Dashboard Quick-Search
 
 The dashboard shall provide a prominent quick-search field.
 
@@ -406,7 +420,7 @@ The final searchable fields will be determined during database design.
 
 ---
 
-## FR-12 — Search Filters
+## FR-17 — Search Filters
 
 The inventory interface shall provide filters allowing the user to narrow the displayed results.
 
@@ -422,7 +436,7 @@ Multiple filters should be capable of being applied together where technically a
 
 ---
 
-## FR-13 — Sorting Options
+## FR-18 — Sorting Options
 
 The system shall allow inventory records to be sorted according to relevant attributes.
 
@@ -439,7 +453,7 @@ The user should be able to choose ascending or descending order where applicable
 
 ---
 
-## FR-14 — Database Query Optimization
+## FR-19 — Database Query Optimization
 
 The application shall use optimized SQLite queries for inventory retrieval.
 
@@ -449,7 +463,7 @@ The application shall avoid unnecessarily loading the complete inventory dataset
 
 ---
 
-## FR-15 — Search Performance Measurement
+## FR-20 — Search Performance Measurement
 
 The system development process shall include measurement of search/retrieval performance.
 
