@@ -1,0 +1,12 @@
+# Core GUI Library
+customtkinter>=5.2.0
+
+# Data Analysis & Handling
+pandas>=2.0.0
+
+# Statistical Quality Control (SQC) & Charts for TQM Analysis
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Optional testing utility (unittest from standard library is also supported)
+pytest>=7.4.0
